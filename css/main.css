@@ -1,4 +1,24 @@
+/*
 
+    Template Author : pixelhint.com
+    Author Email    : contact@pixelhint.com
+    Template Name   : Magnetic
+    
+    
+    *****************************************
+    
+    
+    - Fonts
+    - General CSS
+    - Header
+    - Home/portfolio 
+    - Inner page 
+    - Map/Contact page  
+    - Tooltip 
+    - Responsive code
+  
+    
+*/
 
 
 
@@ -48,6 +68,50 @@ body{
     background: #fff;
 }
 
+#top-banner{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    text-align: center;
+}
+
+#top-banner #banner-img{
+    height: 100%;
+    margin: 0 auto;
+}
+
+#main-nav{
+    height: 40vh;
+    overflow: scroll;
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    padding-left: 20%;
+    padding-right: 10%;
+    height: 0;
+    text-align: center;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%;
+    padding-left: 20%;
+
+}
+
+header{
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
 .wrapper{
     width: 92.72727272727273%;
     margin: 0 auto;
@@ -91,42 +155,30 @@ h5, h6          { font-weight: bolder }
 
 
 
+
+
+
+
 /*  Header  */
 @media (min-width:1099px){
-
-    .mainpage header{
+    header{
         display: block;
-        position: absolute;
-        margin-top: 70%;
+        position: fixed;
         top: 0;
         left: 0;
-        width: 19%;
+        width: 250px;
         min-height: 100%;
         padding: 0 0 0 50px;
         background: #ffffff; 
         float: left;
         overflow: hidden;
         z-index: 9999;
-    }
-
-    .contentpage header{
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 19%;
-        min-height: 100%;
-        padding: 0 0 0 50px;
-        background: #ffffff; 
-        float: left;
-        overflow: hidden;
-        z-index: 9999;
-
+        opacity: 0;
     }
 
     header .logo{
         margin-top: 50px;
-        
+        margin-bottom: 70px;
     }
 
     header nav ul{
@@ -134,6 +186,7 @@ h5, h6          { font-weight: bolder }
         overflow: hidden;
         margin-top: 100px;
         list-style: none;
+
     }
 
     header nav ul li{
@@ -154,6 +207,34 @@ h5, h6          { font-weight: bolder }
         color: #969595;
     }
 
+    #menu_icon,
+    .close_menu{
+        display: none;
+    }
+
+}
+
+#menu_icon,
+.close_menu{
+    float: right;
+    margin-right: 40px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: url('../img/men_icons.png') no-repeat;
+}
+
+#menu_icon{    
+    background-position: 0 0;
+}
+.close_menu{
+    background-position: -41px 0!important;
+}
+
+
+
+
+
 
 /*  Main  */
 .main{
@@ -167,18 +248,13 @@ h5, h6          { font-weight: bolder }
     z-index: 55;
     background: #fff;
     clear: both;
-  
 }
 
 
-.coverpic{
-
-    width: 100%;
-    height: 100%;
-    position: relative;
 
 
-}
+
+
 
 /*  Home/portfolio  */
 .main .work{
@@ -188,7 +264,6 @@ h5, h6          { font-weight: bolder }
     float: left;
     position: relative;
     overflow: hidden;
-
 }
 
 .main .work .media{
@@ -203,17 +278,14 @@ h5, h6          { font-weight: bolder }
     height: 100%;
     top: 0; 
     left: 0;
-    background: #fff;
+    background: #ffffff;
     opacity: 0;
-    
 }
 
 
 .main .work a:hover .caption{
-    opacity: 0.7;
-    
+    opacity: 1;
 }
-
 
 
 .work .caption .work_title{
@@ -231,13 +303,12 @@ h5, h6          { font-weight: bolder }
     max-width: 90%;
     padding: 20px 0;
     z-index: 77;
-    color: #000;
+    color: #454545;
     font-family: "raleway-regular", arial;
     font-size: 16px;
-    letter-spacing: 2px;
-    line-height: 2;
-    text-decoration: none;     
-    
+    letter-spacing: .5px;
+    border-bottom: 1px solid #bfbbbb;
+    border-top: 1px solid #bfbbbb;
 }
 
 
@@ -246,14 +317,14 @@ h5, h6          { font-weight: bolder }
 
 
 
-/*  Content Page  */
+/*  Inner Page  */
 .top{
     width: 100%;
-    height: 50vh;
+    height: 350px;
     overflow: hidden;
     display: block;
     position: relative;
-    background: url('../img/cover.png') no-repeat;
+    background: url('../img/cover1.png') no-repeat;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -279,7 +350,6 @@ h5, h6          { font-weight: bolder }
     float: left;
     margin: 0 0 1px 1px;
     position: relative;
-    line-height: 1.3;
 }
 
 .work_nav a{
@@ -288,7 +358,6 @@ h5, h6          { font-weight: bolder }
     height: 40px;
     background: url('../img/p_navigation.png') no-repeat;
     background-position: 0 0;
-
 }
 
 .work_nav a.previous{
@@ -301,17 +370,17 @@ h5, h6          { font-weight: bolder }
 
 .work_nav a.next{
     background-position: -82px 0;
-
 }
 
 .top .title{
     display: block;
     width: 100%;color: #4b4848;
-    font-family: "raleway-regular", arial;
-    font-size: 22px;
-    color: #fff;
-    background: rgba(255, 255, 255, .15);
+    font-family: "raleway-bold", arial;
+    font-size: 26px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, .7);
     padding: 20px;
+    text-transform: uppercase;
     line-height: 30px;
     margin: 0!important;
     overflow: hidden;
@@ -353,11 +422,6 @@ h5, h6          { font-weight: bolder }
     margin-bottom: 60px;
 }
 
-.video {
-    text-align: center;
-    margin-left: 15vh;
-}
-
 .content h1,
 .content h2,
 .content h3,
@@ -378,6 +442,28 @@ h5, h6          { font-weight: bolder }
 
 
 
+/*  Contact page map  */
+#map .map_adresse{
+    font-family: 'raleway-regular', arial;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 1px;
+}
+
+#map .map_address,
+#map .map_tel{
+    padding: 5px;
+}
+
+#map .map_address .address,
+#map .map_tel .tel{
+    font-family: 'raleway-bold', arial;
+    font-weight: bolder;
+}
+
+#map img{
+    max-width: none;
+}
 
 
 
@@ -423,5 +509,83 @@ h5, h6          { font-weight: bolder }
 
 
 
+/*  Responsive code  */
+@media (max-width:1099px){
 
+    header{
+        display: block;
+        width: 100%;
+        min-height: 100px;
+        padding: 0;
+        position: relative;
+        opacity:1;
+    }
+    header .logo{
+        margin: 25px 0 0 30px;
+        width:5em;
+        float: left;
+    }
+    header .footer{
+        display: none;
+    }
+    header #menu_icon,
+    header .close_menu{
+        float: right;
+        margin: 30px 30px 0 0;
+    }
+    
+    header nav{
+        width: 100%;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        z-index: 9999;
+    }
+
+    header nav ul{
+        list-style: none;
+        display: none;
+        position: relative;
+    }
+    header nav ul li a{
+        display: block;
+        width: 100%;
+        padding: 30px 0;
+        text-align: center;
+        color: #454545;
+        font-family: "raleway-regular", arial;
+        font-size: 14px;
+        text-decoration: none;
+        border-top: 1px solid #f7f5f5;
+        background: #fff;
+    }
+    header nav ul li a:active{
+        background: #f7f5f5;
+    }
+    #menu_icon,
+    .close_menu,
+    .show_menu{
+        display: block;
+    }
+    .show_menu{
+        display: block;
+    }
+
+    .main .work{
+        width: 50%;
+    }
+    .main{
+        width: 100%;
+        position: relative;
+        padding-left: 0;
+    }
+    #map{
+        margin: 0!important;
+    }
+}
+
+@media (max-width:550px){
+     .main .work{
+        width: 100%;
+    }
 }

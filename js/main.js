@@ -75,6 +75,26 @@ $(document).ready(function(){
 });
 
 
+$(document).scroll(function(){
+
+    var main = $('.main').offset().top - 100;
+
+     if ($(window).width() > 1099)  {
+
+        if($(this).scrollTop() > main){
+        $('header').css({"opacity":"1"});
+     }
+
+     else{
+        $('header').css({"opacity":"0"});
+     }
+
+ }
+
+    });
+
+
+
 
 
 
